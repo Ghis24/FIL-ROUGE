@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin :0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin:0px;
+    padding:0px;
+    text-align: center;
+}
+
+h1{ 
+    margin:10px; 
+}
+
+h1:before{
+    content:"";
+    border-radius: 75%;
+    background: white;
+    position:absolute;
+    top:0;
+    left:25px;
+    right:25px;
+    bottom: 5px;
+    z-index:-1;
+    transform:skewX(-50deg);
+}
+
+article{
+    width: 100%;
+    grid-row-start: 2/7;
+}
+
+form{
+    margin-top:5%;
+    margin-left:30px;
+    position: relative;
+    
+}
+
+input{
+    width:25%;
+    margin-top:5px;
+    border:1px solid #c9c9c9;
+    background: lightslategrey;
+    border-radius: 5px;
+    padding:10px 5px 10px 30px;
+    margin:10px;
+}
+
+.fa-user ,.fa-envelope,.fa-mobile-alt{
+    position: absolute;
+    left:0;
+    padding:15px ;  
+}
+
+textarea{
+    width:50%;
+    border-radius: 5px;
+    border:1px solid #c9c9c9;
+    background: lightslategrey;
+    height:150px;
+    margin:10px;
+    resize:none;
+
+}
+
+button{
+    background-color: lightblue;
+    border:2px solid;
+    border-radius: 10px;
+    height:35px;
+    padding:10px 30px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color:black;
+    color:white;
+}

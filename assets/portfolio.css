@@ -54,3 +54,40 @@ img{
     box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
 }
 
+@media screen and (min-height:375px){
+    article{
+        display:grid;
+        grid-template-columns: 1;
+        grid-gap:10px;
+        
+    }
+    
+    h1:before{
+        content:"";
+        border-radius: 75%;
+        background: white;
+        position:absolute;
+        top:0;
+        left:25px;
+        right:25px;
+        bottom: 5px;
+        z-index:-1;
+        transform:skewX(-50deg);
+    }
+    
+    #Illustration,
+    #Digital,
+    #Autres{
+        display:flex;
+        flex-direction: column;
+    
+    }
+    
+    img{
+        width:275px;
+        height:330px;
+        margin:1px;
+        box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+    }
+    
+}

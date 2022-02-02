@@ -19,17 +19,12 @@ body{
     'header header header header header header'
     'menu main main main right right'
     'menu footer footer footer footer footer';
-    grid-gap:5px;
-    padding:5px;
-}
-
-.grid-container{
-    border:1px solid;
-    display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap:10px;
     grid-auto-rows: minmax(100px,auto);
+    
 }
+
 
 /* .Header,.Menu,.Main,.Footer{
     border:2px solid;
@@ -108,11 +103,11 @@ article h2,p{
 }
 
 img{
-    width:475px;
-    height:500px;
+    width:425px;
+    height:475px;
     justify-self: center;
-    grid-column-start:3;
-    grid-row-start: 2/2;
+    /* grid-column-start:3;
+    grid-row-start: 2/2; */
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     margin: top 5px;
 }
@@ -124,3 +119,112 @@ img{
     justify-content: justify;
 }
 
+@media screen and(min-height=375px){
+    
+    .grid-container{
+    display:grid;
+    grid-template-areas: 
+    'header header'
+    'menu main'
+    'footer footer';
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    grid-auto-rows: minmax(100px,auto);
+    
+}
+
+
+/* .Header,.Menu,.Main,.Footer{
+    border:2px solid;
+} */
+
+.Header{
+    grid-column:1;
+    grid-row:1;
+}
+
+
+.Main{
+    grid-column:1;
+    grid-row:2;
+}
+
+.Footer{
+    grid-column:1;
+    grid-row:6;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a{
+    text-decoration:none;
+    margin:10px;
+    font-weight: bold;
+}
+
+a:hover{
+    transition-duration: 0.4s;
+    text-decoration-line: underline;
+    font-size: larger;
+}
+.Main{
+    text-align:justify;
+}
+
+.Main h1, h2,p{
+    margin:5px;
+}
+
+/* h1{
+    background: white;
+    position:relative;
+    padding:10px; */
+
+
+h1:before{
+    content:"";
+    border-radius: 65%;
+    background: white;
+    position:absolute;
+    top:0;
+    left:25px;
+    right:25px;
+    bottom: 5px;
+    z-index:-1;
+    transform:skewX(-40deg);
+}
+
+
+article{
+   display:grid;
+   grid-template-columns: 20% 30% 1fr;
+   grid-gap:10px;
+
+}
+
+article h2,p{
+    grid-column-start: 2;
+    grid-template-rows: 1/2;
+    padding:30px;
+}
+
+img{
+    width:425px;
+    height:475px;
+    justify-self: center;
+    /* grid-column-start:3;
+    grid-row-start: 2/2; */
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+    margin: top 5px;
+}
+
+
+#Reseaux{
+    display:flex;
+    flex-direction: column;
+    justify-content: justify;
+}
+
+}

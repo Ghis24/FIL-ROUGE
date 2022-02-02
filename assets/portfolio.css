@@ -13,9 +13,10 @@ body{
 
 article{
     display:grid;
-    grid-template-columns: 20% 30% 1fr;
-    grid-gap:15px;
- 
+    /* grid-template-columns: 20% 30% 20%; */
+    grid-template-columns: repeat(1,2fr);
+    grid-gap:10px;
+    
 }
 
 h1:before{
@@ -31,48 +32,21 @@ h1:before{
     transform:skewX(-50deg);
 }
 
-article{
-    display:grid;
-    grid-template-columns: 30% 30% 1fr;
-    grid-gap:15px;
+#Illustration{
+    display:flex;
+    flex-direction: row;
+
+}
+
+#Digital{
+    display:flex;
+    flex-direction: row;
 }
 
 img{
     width:375px;
-    height:450px;
-    grid-column-start: 2;
-    grid-row-start: 1;
+    height:430px;
+    margin:1px;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
 }
 
-
-#Illustration,#Pub{
-    width:375px;
-    height:450px;
-    margin:5px;
-    overflow:hidden;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-}
-
-#Illustration{
-    animation: illustration 4s linear;
-}
-
-
-@keyframes illustration {
-    0%{
-
-    }
-
-    33%{
-        transform:translateX(-33%,0);
-    }
-
-    67%{
-        transform:translateX(-67%,0);
-    }
-
-    100%{
-        transform:translateX(-100%,0);
-    }
-
-}

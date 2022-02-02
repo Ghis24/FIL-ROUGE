@@ -20,12 +20,12 @@ body{
     'header header header header header header'
     'menu main main main right right'
     'menu footer footer footer footer footer';
-    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    grid-template-columns: repeat(6,1fr);
     grid-gap:10px;
-    grid-auto-rows: minmax(50px,auto);
+    grid-auto-rows: minmax(100px,auto);
 }
     
-
 
 .Header{
     grid-column:1/7;
@@ -94,18 +94,18 @@ nav{
     .grid-container{
 
         display:grid;
+        width:100vh;
         grid-template-areas: 
         'header header'
         'menu main'
         'footer footer';
-        grid-template-columns: repeat(1,1);
+        grid-template-columns: repeat(3,1fr);
         grid-gap:5px;
-        grid-auto-rows: minmax(50px,auto);
+        grid-auto-rows: minmax(100px,auto);
     }
     
-    
     .Header{
-        grid-column:1;
+        grid-column:1/7;
         grid-row:1;
     }
     
@@ -139,10 +139,10 @@ nav{
         text-align:justify;
     }
     
+
     .Main h1, h2,p{
         margin:5px;
     }
-    
     
     #Reseaux{
         display:flex;
@@ -155,3 +155,4 @@ nav{
         animation-name:menu;
     }
 }
+

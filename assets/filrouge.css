@@ -151,7 +151,7 @@ img{
 
 .Footer{
     grid-column:1;
-    grid-row:6;
+    grid-row:7;
 }
 
 nav{
@@ -195,7 +195,6 @@ h1:before{
     z-index:-1;
     transform:skewX(-40deg);
 }
-
 
 article{
    display:grid;
